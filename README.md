@@ -9,8 +9,7 @@ Team #15:
 * Jason Zhang         | gzhang37
 			
 -----------------------------------
-Name of Class: ClientGUI
-Name of Developer: Jason
+Name of Class: ClientGUI | Name of Developer: Jason
 
 Class Description/Function(s):
 * When each client logs on, they will choose if the server plays in “easy”, “medium” or “expert” mode and play a game of Tic Tac Toe with the server.
@@ -21,23 +20,20 @@ Class Description/Function(s):
 * It must have a way to display the current game board, top 3 scores and a “play again” button.
 * Write two test cases for this class. (The test could test the functionality of a method or the accessibility of a class data member).
 -----------------------------------
-Name of Class: ServerGUI
-Name of Developer: Jason
+Name of Class: ServerGUI | Name of Developer: Jason
 
 Class Description/Function(s):
 * It must have a start-up scene to enter the port and start the server. 
 * It must have a list view that records the actions and traffic on the server.
 * Write two test cases for this class. (The test could test the functionality of a method or the accessibility of a class data member).
 -----------------------------------
-Name of Class: GameInfo
-Name of Developer: Aksa
+Name of Class: GameInfo | Name of Developer: Aksa
 
 * Class Description/Function(s):
 * It must still utilize the GameInfo class as the only means of passing information between the server and each client.
 * Write two test cases for this class. (The test could test the functionality of a method or the accessibility of a class data member).
 -----------------------------------
-Name of Class: Server
-Name of Developer: Lawford
+Name of Class: Server | Name of Developer: Lawford
 
 Class Description/Function(s):
 * Keeps track of the list of the top 3 highest scores.
@@ -46,15 +42,13 @@ Class Description/Function(s):
 * The server will have a single instance of the FindNextMove class that will be used to determine each next move for each client game.
 * Write two test cases for this class. (The test could test the functionality of a method or the accessibility of a class data member).
 -----------------------------------
-Name of Class: ServerThread
-Name of Developer: Lawford
+Name of Class: ServerThread | Name of Developer: Lawford
 
 Class Description/Function(s):
 * The ServerThread will utilize the instance of FindNextThread found in its enclosing class, which is Server, to determine its moves as well as when the game has been won, tied or lost.
 * Write two test cases for this class. (The test could test the functionality of a method or the accessibility of a class data member).
 -----------------------------------
-Name of Class: FindNextMove
-Name of Developer: Hilda
+Name of Class: FindNextMove | Name of Developer: Hilda
 
 Class Description/Function(s):
 * It must take the current state for a game and call the Min-Max algorithm to inform the server of its next move.
@@ -64,16 +58,14 @@ Class Description/Function(s):
 * Determine how to use the results of the algorithm for “expert,” “easy,” and “medium” modes and return the appropriate play according to the difficulty mode.
 * Include JUnit 5 test cases for the Min-Max code provided. 
 -----------------------------------
-Name of Class: ClientThread
-Name of Developer: Hilda
+Name of Class: ClientThread | Name of Developer: Hilda
 
 Class Description/Function(s):
 * At the end of each game, each client will be able to play again or quit. 
 * After each game is complete, the number of client wins should be updated as well as the list of top 3 scores.
 * Write two test cases for this class. (The test could test the functionality of a method or the accessibility of a class data member).
 -----------------------------------
-Name of Class: Client
-Name of Developer: Aksa
+Name of Class: Client | Name of Developer: Aksa
 
 Class Description/Function(s):
 * Write two test cases for this class. (The test could test the functionality of a method or the accessibility of a class data member).
