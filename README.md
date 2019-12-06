@@ -1,11 +1,12 @@
 # CS342-Project05
 TicTacToe w/ Min-Max Algorithm
-
+-----------------------------------
 Team #15: 	
-			Aksa Chacko					achack8
-			Lawford Liu					hliu204
-			Hilda Mendoza-Avila			hmendo3
-			Jason Zhang					gzhang37
+
+Aksa Chacko					achack8
+Lawford Liu					hliu204
+Hilda Mendoza-Avila			hmendo3
+Jason Zhang					gzhang37
 			
 -----------------------------------
 Name of Class: ClientGUI
