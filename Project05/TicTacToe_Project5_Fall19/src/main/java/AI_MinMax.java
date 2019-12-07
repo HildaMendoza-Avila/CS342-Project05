@@ -17,6 +17,23 @@ public class AI_MinMax {
 	
 	private ArrayList<Node> movesList;
 	
+	AI_MinMax(String[] board){
+		init_board = board;
+		if(init_board.length != 9)
+		{
+			System.out.println("You have entered an invalid state for tic tac toe, exiting......");
+			System.exit(-1);
+		}
+		
+		MinMax sendIn_InitState = new MinMax(init_board);
+		movesList = sendIn_InitState.findMoves();
+	}
+	
+	ArrayList<Node> getMovesList(){
+		return movesList;
+	}
+	
+	
 	AI_MinMax()
 	{
 		init_board = getBoard();
@@ -50,7 +67,7 @@ public class AI_MinMax {
 			Scanner userInput = new Scanner(System.in);		//open scanner
 			
 			puzzle = userInput.nextLine();					//scan in string
-			
+				
 			puzzleParsed = puzzle.split(delim);
 			userInput.close();   	  						//close scanner
 			
