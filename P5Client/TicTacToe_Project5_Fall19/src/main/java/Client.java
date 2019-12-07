@@ -16,8 +16,8 @@ public class Client extends Thread{
 	
 	private Consumer<Serializable> callback;//put message for port scene
 	private Consumer<Serializable> message; //use for writing message to the client GUI
-	private Consumer<Serializable> setGame; //change scene to game and should also be able to display message to the listview
-	private Consumer<Serializable> setChallenge; //change scene to pick Opponent
+	// private Consumer<Serializable> setGame; //change scene to game and should also be able to display message to the listview
+	// private Consumer<Serializable> setChallenge; //change scene to pick Opponent
 	
 	Client(Consumer<Serializable> call,String ip,int port){
 		callback = call;
