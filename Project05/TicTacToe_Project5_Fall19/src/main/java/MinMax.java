@@ -14,11 +14,8 @@ import java.util.*;
 public class MinMax {
 	
 	private String[] initState;		//contains the initial state as a string array
-	
 	private Node initNode;			//node for the initial state
-	
 	private ArrayList<Node> stateList;	//a list to contain all possible moves for X
-	
 	
 	/**
 	 * constructor for the class, sets all data members
@@ -27,20 +24,12 @@ public class MinMax {
 	MinMax(String[] init)		
 	{
 		initState = init;			//set the initial state string array
-		
 		setInitNode();				//set the initial state node
-		
 		stateList = createStateList("max", initNode);		//get list of all X moves from initial state
-		
 		System.out.println("\nThese are all the possible moves for X from the initial state: \n");
-		
 		printList(stateList);					//print out the possible moves for X
-		
 		setStateList_MinMaxValues(stateList, 1);			//set initial state minMax values for X moves
-		
 		print_minMax(stateList);				//print out min max for initial board states
-		
-		
 	}
 	
 	/**
@@ -57,15 +46,11 @@ public class MinMax {
 			{
 				//call min which will find the ultimate minmax value for the node and 
 				//perculate it up
-				
 				stateList.remove(x);			//remove node to replace it with new value
-				
 				temp.setMinMax(Min(temp));
-				
 				stateList.add(x,temp);			//add the node back
 			}
 		}
-		
 		System.out.println("\nAt the end of FindMoves, the states and min/max values are:\n");
 		printList(stateList);
 		print_minMax(stateList);
@@ -88,29 +73,21 @@ public class MinMax {
 	 */
 	private ArrayList<Node> createStateList(String minOrMax, Node stateNode)
 	{
-		
 		ArrayList<Node> stateList = new ArrayList<Node>();		//array list to hold all possible moves
-		
 		String[] initState = stateNode.getInitStateString();	//string of initial state of board
 		
 		if(minOrMax == "max")		//list of all X moves
 		{
 			//loop through the array, set each new state(X move) to a node and put in the list
-			
 			for(int x = 0 ; x < initState.length ; x++)
 			{
-				if(initState[x].equals("b"))								//its a blank space
+				if(initState[x].equals("b"))								//it's a blank space
 				{
 					//create new array with X in initState[x]
-					
 					String[] copyInit = new String[initState.length];		//new string array for the new state
-					
 					System.arraycopy(initState, 0, copyInit, 0, initState.length);	//copy in values to new state array
-					
 					copyInit[x] = "X";										//change "b" to X at proper index
-					
 					Node temp = new Node(copyInit, x+1);				//make a Node out of it
-					
 					stateList.add(temp);								//add it to list
 				}
 			}
@@ -123,20 +100,14 @@ public class MinMax {
 			{
 				if(initState[x].equals("b"))		//its a blank space
 				{
-					//create new array with X in [x]
-					
+					//create new array with O in [x]
 					String[] copyInit = new String[initState.length];		//new string array for the new state
-					
 					System.arraycopy(initState, 0, copyInit, 0, initState.length);	//copy in values to new state array
-					
 					copyInit[x] = "O";		//change "b" to O at proper index		
-															
 					Node temp = new Node(copyInit, x+1);	//make a Node out of it
-																
 					stateList.add(temp);	//add it to list
 				}
 			}
-
 		}
 		
 		return stateList;
@@ -159,7 +130,6 @@ public class MinMax {
 			for(int y = 0; y< tempString.length; y++)		//print out the string array for that node
 			{
 				System.out.print(tempString[y] + " ");
-				
 				if(y == 2 || y == 5)
 				{
 					System.out.print("\n");
@@ -181,7 +151,6 @@ public class MinMax {
 			for(int x =0; x < theStateList.size(); x++)
 			{
 				Node temp = theStateList.get(x);
-				
 				temp.setMinMax_for_X();
 			}
 		}
@@ -190,10 +159,8 @@ public class MinMax {
 			for(int x =0; x < theStateList.size(); x++)
 			{
 				Node temp = theStateList.get(x);
-				
 				temp.setMinMax_for_O();
 			}
-
 		}
 	}
 	
@@ -206,7 +173,6 @@ public class MinMax {
 		for(int x = 0; x < list.size(); x++ )
 		{
 			Node temp = list.get(x);
-			
 			System.out.print("state " + x + ": minMax: "+temp.getMinMax()+ "\n");
 		}
 
@@ -373,8 +339,5 @@ public class MinMax {
 			return -10;
 		}
 	}
-	
-	
-	
 	
 }
